@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Hojasdeplata';
+  src: url('Hojasdeplata.eot');
+  src: url('Hojasdeplata.woff2') format('woff2'),
+       url('Hojasdeplata.woff') format('woff'),
+       url('Hojasdeplata.ttf') format('truetype'),
+       url('Hojasdeplata.svg#Hojasdeplata') format('svg'),
+       url('Hojasdeplata.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

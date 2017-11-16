@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Garden;
+    src: url("fonts/Hojasdeplata/Hojasdeplata.woff") format("woff");
+}
+
+body {
+    background-color: #FEFEFE;
+}
+
+/** NAVIGATION **/
+
+.hwp-navbar {
+    height: 50px;
+}
+
+.hwp-nav a {
+    font-size: 20px;
+    color: #fff;
+}
+
+.hwp-nav a:hover {
+    color: orangered;
+}
+
+.hwp-nav a.logo {
+    font-size: 48px;
+}
+
+/** HERO **/
+
+.hwp-hero {
+    background: linear-gradient(to right top, rgba(29, 101, 29, 0.4), rgba(29, 101, 29, 0.4)), url("../images/hero-garden5.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
