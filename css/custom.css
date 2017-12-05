@@ -10,7 +10,8 @@ body {
 /** NAVIGATION **/
 
 .hwp-navbar {
-    height: 50px;
+    height: 80px;
+    font-size: larger;
 }
 
 .hwp-nav a {

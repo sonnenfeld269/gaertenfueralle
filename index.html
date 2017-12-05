@@ -4,89 +4,132 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Bulma!</title>
+  <title>Gärten für Alle</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
-  <section class="hero is-large hwp-hero">
-    <div class="hero-head">
-      <nav class="navbar hwp-navbar hwp-nav is-fixed-top">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item">Gärten für Alle!
+  <nav class="navbar is-success is-fixed-top hwp-navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item"><img src="herb.svg" width="50"></img>Gärten für Alle!
           </a>
-            <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+        <span class="navbar-burger burger" data-target="navbarMenuHeroB">
             <span></span>
-            <span></span>
-            <span></span>
-            </span>
-          </div>
-          <div id="navbarMenuHeroB" class="navbar-menu">
-            <div class="navbar-end">
-              <a class="navbar-item page-scroll" href="#about">
+        <span></span>
+        <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroB" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item page-scroll" href="#about">
               Über Uns
             </a>
-              <a class="navbar-item page-scroll" href="#gardens">
-              Unsere Projekte
+          <a class="navbar-item page-scroll" href="#gardens">
+              Die Gärten
             </a>
-              <a class="navbar-item page-scroll" href="#pics">
-              Bilder
+          <a class="navbar-item page-scroll" href="#pics">
+              Workshops
             </a>
-              <a class="navbar-item page-scroll" href="#contact">
+          <a class="navbar-item page-scroll" href="#contact">
               Kontakt
             </a>
-            </div>
-          </div>
         </div>
-      </nav>
+      </div>
     </div>
-
+  </nav>
+  <section class="hero is-info is-large hwp-hero">
     <div class="hero-body">
-      <div class="container has-text-centered">
+      <div class="container">
         <h1 class="title has-text-white">
           “Gardening is the most therapeutic and defiant act you can do, especially in the inner city. Plus, you get strawberries.”
         </h1>
-        <br>
         <h2 class="subtitle has-text-white">
           Ron Finley
         </h2>
       </div>
     </div>
-
   </section>
 
   <section class="section" id="about">
     <div class="container">
-      <h1 class="title">
-        Über uns
-      </h1>
-      <p class="subtitle">
-        Wir sind ein Verein mit Sitz im 19 Wiener Gemeindebezirk. Alles begann mit einem kleinen Gemeinschaftsgarten in der Krottenbachstrasse.
-        Jetzt stehen wir vor einem größeren Projekt, dem Garten im Hugo Wolf Park.
-      </p>
+      <div class="content">
+        <h1>
+          Über uns
+        </h1>
+        <p>
+          Wir sind ein Verein mit Sitz im 19 Wiener Gemeindebezirk. Alles begann mit einem kleinen Gemeinschaftsgarten in der Krottenbachstrasse.
+          Jetzt stehen wir vor einem größeren Projekt, dem Garten im Hugo Wolf.
+        </p>
+      </div>
     </div>
   </section>
   <section class="section" id="gardens">
     <div class="container">
-      <h1 class="title">
-        Unsere Gärten
-      </h1>
+      <div class="content">
+        <h1>
+          Die Gärten
+        </h1>
+        <h2>Gemeinschaftsgarten Krottenbach</h2>
+        <figure>
+          <img src="images/gg_krottenbach/bild_1.jpg" width="300">
+          <img src="images/gg_krottenbach/bild_2.jpg" width="300">
+          <img src="images/gg_krottenbach/bild_3.jpg" width="300">
+          <figcaption>
+            GG Krottenbach
+          </figcaption>
+        </figure>
+        <dl>
+          <dt class="has-text-weight-bold">Fläche</dt>
+          <dd>100 m²</dd>
+          <dt class="has-text-weight-bold">Ort</dt>
+          <dd>Krottenbachstrasse 94-96, 1190 Wien</dd>
+          <dt class="has-text-weight-bold">Infos zu Beeten und Wildnis</dt>
+          <dd>6 Beete, 5 Hügelbeete, verschiedenste Wildblumen, Himbeersträucher</dd>
+        </dl>
+        <h2>Gemeinschaftsgarten Hugo Wolf</h2>
+        <figure>
+          <img src="images/gg_hugo_wolf/bild_1.jpg" width="300">
+          <img src="images/gg_hugo_wolf/bild_2.jpg" width="300">
+          <figcaption>
+            GG Hugo Wolf
+          </figcaption>
+        </figure>
+        <dl>
+          <dt class="has-text-weight-bold">Fläche</dt>
+          <dd>850 m²</dd>
+          <dt class="has-text-weight-bold">Ort</dt>
+          <dd>Ende Rückaufgasse, 1190 Wien</dd>
+          <dt class="has-text-weight-bold">Infos zu Beeten und Wildnis</dt>
+          <dd>über 60 Beete, verschiedenste Wildblumen, Sträucher, 6 Obstbäume</dd>
+        </dl>
+        <h2>Gemeinschaftsgarten Grünes Eck</h2>
+        <dl>
+          <dt class="has-text-weight-bold">Ort</dt>
+          <dd>Elderschplatz 1-2, 1020 Wien</dd>
+          <dt class="has-text-weight-bold">Status</dt>
+          <dd>In Verhandlung</dd>
+        </dl>
+        <h2>Gemeinschaftsgarten und Wildnisgarten Donauinsel</h2>
+        <dl>
+          <dt class="has-text-weight-bold">Fläche</dt>
+          <dd>über 15000 m²</dd>
+          <dt class="has-text-weight-bold">Ort</dt>
+          <dd>Donauinsel ggü KwK Kraftwerk, 1220 Wien</dd>
+          <dt class="has-text-weight-bold">Status</dt>
+          <dd>In Verhandlung</dd>
+        </dl>
+      </div>
     </div>
   </section>
   <section class="section" id="pics">
     <div class="container">
-      <h1 class="title">
-        Bildergallerie!
-      </h1>
-      <div>
-        <img src="https://picsum.photos/800/?random" />
-        <img src="https://picsum.photos/800/?random" />
-        <img src="https://picsum.photos/800/?random" />
-        <img src="https://picsum.photos/800/?random" />
-        <img src="https://picsum.photos/800/?random" />
+      <div class="content">
+        <h1>
+          Workshops!
+        </h1>
       </div>
     </div>
   </section>
@@ -103,6 +146,33 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/scrolling.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Get all "navbar-burger" elements
+      var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(function ($el) {
+          $el.addEventListener('click', function () {
+
+            // Get the target from the "data-target" attribute
+            var target = $el.dataset.target;
+            var $target = document.getElementById(target);
+
+            // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+            $el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
 </body>
 
 </html>
