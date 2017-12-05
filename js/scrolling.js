@@ -3,8 +3,8 @@ $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 40
-        }, 'slow');
+            scrollTop: $($anchor.attr('href')).offset().top - 30
+        }, 800);
         event.preventDefault();
     });
 });
