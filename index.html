@@ -6,15 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gärten für Alle</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/bulma.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/transformed.css">
 </head>
 
 <body id="start">
   <nav class="navbar is-success is-fixed-top hwp-navbar">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item page-scroll" href="#start"><img src="herb.svg" width="50"></img>Gärten für Alle!
+        <a class="navbar-item page-scroll" href="#start"><img src="images/svg/herb.svg" width="50"></img>Gärten für Alle!
           </a>
         <span class="navbar-burger burger" data-target="navbarMenuHeroB">
             <span></span>
@@ -69,8 +68,6 @@
         <h1>
           Die Gärten
         </h1>
-
-
         <div v-for="garden in gardens">
           <h2>Gemeinschaftsgarten {{garden.name}}</h2>
           <figure v-if="garden.images.length > 0">
@@ -120,8 +117,8 @@
                   <em>
                     Datum:
                     <time class="is-italic">Am {{workshop.date}} - {{workshop.time}} Uhr</time><br> Ort: <span>{{workshop.address}}</span><br><br>
-                  </em>
-                  {{workshop.description}}<br><br>
+                  </em> {{workshop.description}}
+                  <br><br>
                   <span class="has-text-weight-bold">Wir brauchen:</span><br> {{workshop.items}}
                   <br><br>
                   <span class="has-text-weight-bold">Nützliche Links:</span>
@@ -154,10 +151,20 @@
       </div>
     </div>
   </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          Made with <img src="images/svg/sunflower2.svg" width="25"></img> by <a href="http://sonnenfeld269.github.com">David Ifraimov</a>
+        </p>
+      </div>
+    </div>
+  </footer>
   <script src="https://unpkg.com/vue"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/scrolling.js"></script>
+  <script src="js/authenticate.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
 
