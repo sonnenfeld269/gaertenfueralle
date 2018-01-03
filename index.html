@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 
 <head>
   <meta charset="utf-8">
@@ -68,7 +68,7 @@
         <h1>
           Die Gärten
         </h1>
-        <div v-for="garden in gardens">
+        <div v-for="garden in gardens" v-if="!garden.hide">
           <h2>Gemeinschaftsgarten {{garden.name}}</h2>
           <figure v-if="garden.images.length > 0">
             <template v-for="image in garden.images">
@@ -226,7 +226,8 @@
             "status": "in Verhandlung",
             "beete": "nicht bekannt",
             "wild": "nicht bekannt",
-            "images": []
+            "images": [],
+            "hide": true
           },
           {
             "name": "Grünes Eck",
