@@ -15,6 +15,7 @@ body {
   background-size: cover;
   background-position: center; }
 
+/** CONTENT **/
 #gardens img {
   margin-right: 5px; }
 
@@ -23,6 +24,9 @@ body {
 
 #workshops .card-image {
   box-shadow: 0 1px 2px rgba(10, 10, 10, 0.1); }
+
+#workshops .link-list {
+  word-wrap: break-word; }
 
 /** FOOTER **/
 .footer {
