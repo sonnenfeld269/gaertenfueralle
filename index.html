@@ -13,31 +13,34 @@
   <nav class="navbar is-success is-fixed-top hwp-navbar">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item page-scroll" href="#start"><img src="images/svg/herb.svg" width="50"></img>Gärten für Alle!
-          </a>
+        <a class="navbar-item page-scroll" href="#start">
+          <img src="images/svg/herb.svg" width="50"></img>Gärten für Alle!
+        </a>
         <span class="navbar-burger burger" data-target="navbarMenuHeroB">
-            <span></span>
-        <span></span>
-        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </span>
       </div>
       <div id="navbarMenuHeroB" class="navbar-menu">
         <div class="navbar-end">
           <a class="navbar-item page-scroll" href="#about">
-              Über Uns
-            </a>
+            Über Uns
+          </a>
           <a class="navbar-item page-scroll" href="#gardens">
-              Die Gärten
-            </a>
+            Die Gärten
+          </a>
+          <!--
           <a class="navbar-item page-scroll" href="#workshops">
-              Workshops
-            </a>
-            <a class="navbar-item page-scroll" href="#donate">
-              Spenden
-            </a>
+            Workshops
+          </a>
+          -->
+          <a class="navbar-item page-scroll" href="#donate">
+            Spenden
+          </a>
           <a class="navbar-item page-scroll" href="#contact">
-              Kontakt
-            </a>
+            Kontakt
+          </a>
         </div>
       </div>
     </div>
@@ -95,15 +98,16 @@
       </div>
     </div>
   </section>
+  <!--
   <section class="section" id="workshops">
     <div class="container">
       <div class="content">
         <h1>
-          Workshops!
+          Workshops! {{}}
         </h1>
         <div class="columns">
           <div class="column" v-for="workshop in workshops">
-            <div class="card">
+            <div class="card" v-if="formateDate(workshop.date) > new Date()">
               <div class="card-image">
                 <figure class="image is-4by3">
                   <img :src="workshop.image" :alt="workshop.title">
@@ -119,20 +123,31 @@
                 <div class="content">
                   <em>
                     Datum:
-                    <time class="is-italic">Am {{workshop.date}} - {{workshop.time}} Uhr</time><br> Ort: <span>{{workshop.address}}</span><br><br>
+                    <time class="is-italic">Am {{workshop.date}} - {{workshop.time}} Uhr</time>
+                    <br> Ort:
+                    <span>{{workshop.address}}</span>
+                    <br>
+                    <br>
                   </em> {{workshop.description}}
-                  <br><br>
-                  <span class="has-text-weight-bold">Wir brauchen:</span><br> {{workshop.items}}
-                  <br><br>
+                  <br>
+                  <br>
+                  <span class="has-text-weight-bold">Wir brauchen:</span>
+                  <br> {{workshop.items}}
+                  <br>
+                  <br>
                   <span class="has-text-weight-bold">Nützliche Links:</span>
                   <ul class="link-list">
-                    <li v-for="link in workshop.helpful_links"><a :href="link">{{link}}</a><br></li>
+                    <li v-for="link in workshop.helpful_links">
+                      <a :href="link">{{link}}</a>
+                      <br>
+                    </li>
                   </ul>
                   <br>
                 </div>
               </div>
             </div>
           </div>
+          <div v-else> Nothing </div>
           <div class="column">
           </div>
           <div class="column">
@@ -142,6 +157,7 @@
       </div>
     </div>
   </section>
+  -->
   <section class="section" id="donate">
     <div class="container">
       <div class="content">
@@ -149,10 +165,14 @@
           Spenden
         </h1>
         <p>
-          Wenn du uns unterstützen magst, wären wir total glücklich. Denn so können wir effektiver unsere Gärten betreuuen und neue Gartenprojekte angehen.
+          Wenn du uns unterstützen magst, wären wir total glücklich. Denn so können wir effektiver unsere Gärten betreuuen und neue
+          Gartenprojekte angehen.
         </p>
         <h2>Banküberweisung</h2>
-        <p>Empfänger: Gärten für Alle! <br>IBAN: AT48 1420 0200 1267 0185 <br>BIC: EASYATW1 <br>Verwendungszweck: Spende</p>
+        <p>Empfänger: Gärten für Alle!
+          <br>IBAN: AT48 1420 0200 1267 0185
+          <br>BIC: EASYATW1
+          <br>Verwendungszweck: Spende</p>
 
       </div>
     </div>
@@ -164,7 +184,8 @@
           Wollen Sie mitmachen oder haben Fragen?
         </h1>
         <p>
-          Dann kontaktieren sie uns unter <a href="mailto:gaerten.fuer.alle@gmail.com" target="_top">gaerten.fuer.alle@gmail.com</a>
+          Dann kontaktieren sie uns unter
+          <a href="mailto:gaerten.fuer.alle@gmail.com" target="_top">gaerten.fuer.alle@gmail.com</a>
         </p>
       </div>
     </div>
@@ -173,7 +194,9 @@
     <div class="container">
       <div class="content has-text-centered">
         <p>
-          Made with <img src="images/svg/sunflower2.svg" width="25"></img> by <a href="http://sonnenfeld269.github.com">David Ifraimov</a>
+          Made with
+          <img src="images/svg/sunflower2.svg" width="25"></img> by
+          <a href="http://sonnenfeld269.github.com">David Ifraimov</a>
         </p>
       </div>
     </div>
@@ -218,15 +241,16 @@
     new Vue({
       el: '#gardens',
       data: {
-        gardens: [
-          {
+        gardens: [{
             "name": "Krottenbach",
             "address": "Krottenbachstrasse 94-96, 1190 Wien",
             "area": "100",
             "status": "genehmigt",
             "beete": "11",
             "wild": "verschiedenste Wildblumen, Himbeersträucher",
-            "images": ["images/gardens/gg_krottenbach/bild_1.jpg", "images/gardens/gg_krottenbach/bild_2.jpg", "images/gardens/gg_krottenbach/bild_3.jpg"]
+            "images": ["images/gardens/gg_krottenbach/bild_1.jpg", "images/gardens/gg_krottenbach/bild_2.jpg",
+              "images/gardens/gg_krottenbach/bild_3.jpg"
+            ]
           },
           {
             "name": "Hugo Wolf Park",
@@ -263,23 +287,42 @@
     new Vue({
       el: '#workshops',
       data: {
-        workshops: [
-          {
-            "title": "Wir bauen Wildbienenhotels!",
-            "address": "Gemeinschaftsgarten Hugo Wolf Park",
-            "date": "11.02.2018",
-            "time": "10:00",
-            "description": "Wir bauen ein (oder mehrere) Wildbienenhotels! Der erste Wildbienenhotel Workshop im Gemeinschaftsgarten Hugo Wolf! Natürlich alles kostenlos und jeder kann mitmachen! Bohrmaschine und Schrauben haben wir höchstwahrscheinlich schon vor Ort! ft kann man in Baucontainer Holz finden das weggeschmissen wird. Haltet einfach die Augen offen und sammelt einbisschen was und bringt es dann in den Garten! Je mehr Material wir haben, desto mehr Hotels können wir bauen und ihr könnt euer Hotel dann gleich nach Hause mitnehmen.",
-            "helpful_links": [
-              "http://www.bee-careful.com/de/initiative/wildbienenhotel/",
-              "https://www.bauanleitung.org/tiere/wildbienenhotel-bauanleitung/",
-              "https://www.wikihow.com/Make-an-Insect-Hotel"
-            ],
-            "items": "Säge, Bambusstäbchen, Holz, Bretter",
-            "image": "images/workshops/wildbienen/bee_hotel.jpg"
-          }
-        ]
+        workshops: [{
+          "title": "Wir bauen Wildbienenhotels!",
+          "address": "Gemeinschaftsgarten Hugo Wolf Park",
+          "date": "11.4.2018",
+          "time": "10:00",
+          "description": "Wir bauen ein (oder mehrere) Wildbienenhotels! Der erste Wildbienenhotel Workshop im Gemeinschaftsgarten Hugo Wolf! Natürlich alles kostenlos und jeder kann mitmachen! Bohrmaschine und Schrauben haben wir höchstwahrscheinlich schon vor Ort! ft kann man in Baucontainer Holz finden das weggeschmissen wird. Haltet einfach die Augen offen und sammelt einbisschen was und bringt es dann in den Garten! Je mehr Material wir haben, desto mehr Hotels können wir bauen und ihr könnt euer Hotel dann gleich nach Hause mitnehmen.",
+          "helpful_links": [
+            "http://www.bee-careful.com/de/initiative/wildbienenhotel/",
+            "https://www.bauanleitung.org/tiere/wildbienenhotel-bauanleitung/",
+            "https://www.wikihow.com/Make-an-Insect-Hotel"
+          ],
+          "items": "Säge, Bambusstäbchen, Holz, Bretter",
+          "image": "images/workshops/wildbienen/bee_hotel.jpg"
+        }],
+        upcomingWorkshops: []
+      },
+      methods: {
+        formateDate(date) {
+          var dateArr = date.split('.');
+          //return date;
+          let wDate = new Date();
+          wDate.setDate(dateArr[0]);
+          wDate.setMonth(parseInt(dateArr[1]) - 1);
+          wDate.setFullYear(dateArr[2]);
+          return wDate;
+          //return date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
 
+        }
+      },
+      created: function () {
+        for(let workshop of this.workshops) {
+          if(this.formateDate(workshop.date) > new Date()) {
+            this.upcomingWorkshops.push(workshop);
+            alert(this.upcomingWorkshops[0].title)
+          }
+        }
       }
     });
   </script>
